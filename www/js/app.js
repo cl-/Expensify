@@ -58,7 +58,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     }
   })
 
-  .state('app.single', {
+  .state('app.singlePlaylist', { //name must be different
     url: "/playlists/:playlistId",
     views: {
       'menuContent': {
