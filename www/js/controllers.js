@@ -215,7 +215,9 @@ angular.module('starter.controllers', [])
 
 }])
 
-.controller('BanksCtl', ["$scope", function($scope) {
+.controller('BanksCtl', ["$scope", "$timeout", function($scope, $timeout) {
+  $scope.linkState_DBS = 0;
+  $scope.isLoadingDBSData = false;
   $scope.banks = [
     createBank("DBS Bank", "img/logo/logo_dbs.gif"),
     createBank("Citi Bank", "img/logo/logo_citi.jpg"),
@@ -229,13 +231,25 @@ angular.module('starter.controllers', [])
       "imgUrl": imgUrl,
       "linked": false
     };
-  }
+  };
   $scope.showExpandedDBSCard = function(){
     $scope.showExpandedDBS = true;
-  }
+  };
   $scope.hideExpandedDBSCard = function(){
     $scope.showExpandedDBS = false;
+  };
+  $scope.loadDBSData = function(){
+    $scope.linkState_DBS = 1; //$scope.isLoadingDBSData
+    $timeout(function(){
+      $scope.linkState_DBS = 2;
+      $scope.showExpandedDBS = false;
+    }, 2000);
   }
+  
+  $scope.unlinkDBS = function(){
+    $scope.linkState_DBS = 0; //$scope.isLoadingDBSData
+  }
+
 }])
 
 .controller('RecommendationsCtrl', function($scope) {
