@@ -1,5 +1,3 @@
-
-
 angular.module('starter.controllers', [])
 
 .factory('Camera', ['$q', function($q) {
@@ -51,20 +49,27 @@ angular.module('starter.controllers', [])
     }, 1000);
   };
 
-  if(typeof $scope.d =='undefined'){
+  if (typeof $scope.d == 'undefined') {
     $scope.d = {};
   }
   $scope.savedExpenseData = [];
   $scope.simDataIdx = 0;
   $scope.simData = [
-    createExpense("Ajisen", "Ramen", "$16.00", "27/02/2015"),
-    createExpense("Starbucks", "Coffee", "$5.00", "27/02/2015"),
+    createExpense("Ajisen", "Ramen", "$16.00", "02/27/2015"),
+    createExpense("Starbucks", "Coffee", "$5.00", "02/27/2015"),
   ];
-  function createExpense(shopName, expenseType, amount, date){
-    return {"shopName":shopName, "expenseType":expenseType, "amount":amount, "date":date};
+
+  function createExpense(shopName, expenseType, amount, date) {
+    return {
+      "shopName": shopName,
+      "expenseType": expenseType,
+      "amount": amount,
+      "date": moment(date)
+    };
   }
-  $scope.incSimDataIdx = function(){
-    $scope.simDataIdx = ($scope.simDataIdx+1)% $scope.simData.length;
+
+  $scope.incSimDataIdx = function() {
+    $scope.simDataIdx = ($scope.simDataIdx + 1) % $scope.simData.length;
     console.log("simDataIdx", $scope.simDataIdx);
   }
 
@@ -72,18 +77,28 @@ angular.module('starter.controllers', [])
 })
 
 .controller('PlaylistsCtrl', function($scope) {
-  $scope.playlists = [
-    { title: 'Reggae', id: 1 },
-    { title: 'Chill', id: 2 },
-    { title: 'Dubstep', id: 3 },
-    { title: 'Indie', id: 4 },
-    { title: 'Rap', id: 5 },
-    { title: 'Cowbell', id: 6 }
-  ];
+  $scope.playlists = [{
+    title: 'Reggae',
+    id: 1
+  }, {
+    title: 'Chill',
+    id: 2
+  }, {
+    title: 'Dubstep',
+    id: 3
+  }, {
+    title: 'Indie',
+    id: 4
+  }, {
+    title: 'Rap',
+    id: 5
+  }, {
+    title: 'Cowbell',
+    id: 6
+  }];
 })
 
-.controller('PlaylistCtrl', function($scope, $stateParams) {
-})
+.controller('PlaylistCtrl', function($scope, $stateParams) {})
 
 
 .controller('addExpenseCtl', ["$scope", "$stateParams", "Camera", function($scope, $stateParams, Camera) {
@@ -97,24 +112,24 @@ angular.module('starter.controllers', [])
   //   $scope.d = {}; //#GOTCHA: Don't define it here.
   // }
 
-  $scope.recordVoice = function(){
+  $scope.recordVoice = function() {
     $scope.showSoundwave = true;
   };
-  $scope.stopRecordingVoice = function(){
+  $scope.stopRecordingVoice = function() {
     $scope.showSoundwave = false;
   };
-  $scope.addDataToFields = function(){
-    if (typeof $scope.d.expenseInput == 'undefined'){
+  $scope.addDataToFields = function() {
+    if (typeof $scope.d.expenseInput == 'undefined') {
       $scope.d.expenseInput = {};
     }
-    for (var attrName in $scope.simData[$scope.simDataIdx]){
+    for (var attrName in $scope.simData[$scope.simDataIdx]) {
       $scope.d.expenseInput[attrName] = $scope.simData[$scope.simDataIdx][attrName];
     }
   };
-  $scope.saveData = function(){
+  $scope.saveData = function() {
     $scope.savedExpenseData.push($scope.d.expenseInput);
   };
-  $scope.clearFields = function(){
+  $scope.clearFields = function() {
     $scope.d.expenseInput = undefined;
     $scope.imageURI = '';
   };
@@ -127,15 +142,15 @@ angular.module('starter.controllers', [])
     });
   };
 
-  $scope.simLoadImageURI = function(){
+  $scope.simLoadImageURI = function() {
     console.log("WEWEWE")
     var opacity = [];
     var totalIterations = 4;
-    for(var i=0; i<=totalIterations; ++i){
-      opacity.push((1/totalIterations)*i);
+    for (var i = 0; i <= totalIterations; ++i) {
+      opacity.push((1 / totalIterations) * i);
     }
     $scope.imageURI = "img/iphone-camera-image.png";
-    
+
     // for(var i=0; i<=totalIterations; ++i){
     //   createTimeout(i);
     // }
@@ -146,24 +161,24 @@ angular.module('starter.controllers', [])
     //   }, iter*400);
 
     // }
-    
+
     var opacityIdx = 0;
-    $scope.d.opacityStr = "opacity:"+opacity[opacityIdx]+";";
-    var imageAppearanceInterval = window.setInterval(function(){
-      if (opacityIdx <= totalIterations){
+    $scope.d.opacityStr = "opacity:" + opacity[opacityIdx] + ";";
+    var imageAppearanceInterval = window.setInterval(function() {
+      if (opacityIdx <= totalIterations) {
         opacityIdx += 1;
       }
-      $scope.d.opacityStr = "opacity:"+opacity[opacityIdx]+";";
+      $scope.d.opacityStr = "opacity:" + opacity[opacityIdx] + ";";
       console.log(opacityIdx, "Image ->", $scope.d.opacityStr);
-      if (opacity[opacityIdx] == 1){
+      if (opacity[opacityIdx] == 1) {
         console.log("DONE");
-        $scope.d.opacityStr = "opacity:"+1+";";
+        $scope.d.opacityStr = "opacity:" + 1 + ";";
         window.clearInterval(imageAppearanceInterval);
       }
     }, 400);
-    
+
   };
-  $scope.clearImageURI = function(){
+  $scope.clearImageURI = function() {
     // $scope.d.opacityStr = "opacity:"+0+";";
   };
 
@@ -185,15 +200,32 @@ angular.module('starter.controllers', [])
 
 
 .controller('RecommendationsCtrl', function($scope) {
-  $scope.recommendations = [
-    { title: 'Reggae', id: 1 },
-    { title: 'Chill', id: 2 },
-    { title: 'Dubstep', id: 3 },
-    { title: 'Indie', id: 4 },
-    { title: 'Rap', id: 5 },
-    { title: 'Cowbell', id: 6 }
-  ];
+  $scope.recommendations = [{
+    title: 'Save $3 at MM Cafe',
+    desc: 'Instead of $8 Coffee at Starbucks, MM gives you the same experience with a lower price.'
+  }, {
+    title: 'Save $10 at Restaurant YoYo',
+    desc: 'Healthy and economic lunch set.'
+  }, {
+    title: 'Switch sweets to fruits, save $2',
+    desc: 'Tired in the afternoon, recharge you with nutritiousness and freshness.'
+  }, {
+    title: 'Dinner at JustAsia, save $10',
+    desc: 'Close to your workplace, economic and tasty.'
+  }, {
+    title: '20% discount at Giant',
+    desc: 'Chinese New Year discount.'
+  }, {
+    title: 'Save $5 at Heison Bar',
+    desc: 'Popular spot for expats.'
+  }];
 })
 
-.controller('RecommendationCtrl', function($scope, $stateParams) {
+.controller('RecommendationCtrl', function($scope, $stateParams) {})
+
+.controller('ExpenseSummaryCtl', function($scope) {
+  $scope.selected = 'Year';
+  $scope.select = function(type) {
+    $scope.selected = type;
+  };
 });

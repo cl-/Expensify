@@ -23,7 +23,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
 
-  .state('app', {
+    .state('app', {
     url: "/app",
     abstract: true,
     templateUrl: "templates/menu.html",
@@ -70,14 +70,15 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 
 
   .state('app.addExpense', {
-    url: "/addExpense",
-    views: {
-      'menuContent': {
-        templateUrl: "templates/addExpense.html",
-        // controller: 'addExpenseCtl'
+      url: "/addExpense",
+      views: {
+        'menuContent': {
+          templateUrl: "templates/addExpense.html",
+          // controller: 'addExpenseCtl'
+        }
       }
-    }
   })
+
   .state('app.addExpenseInput', {
     url: "/addExpense/:methodType",
     views: {
@@ -87,6 +88,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     }
   })
+
 
   .state('app.banks', {
     url: "/banks",
@@ -98,15 +100,15 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     }
   })
 
-    .state('app.recommendations', {
-      url: "/recommendations",
-      views: {
-        'menuContent': {
-          templateUrl: "templates/recommendations.html",
-          controller: 'RecommendationsCtrl'
-        }
+  .state('app.recommendations', {
+    url: "/recommendations",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/recommendations.html",
+        controller: 'RecommendationsCtrl'
       }
-    })
+    }
+  })
 
   .state('app.single', {
     url: "/recommendations/:recommendationId",
@@ -116,9 +118,20 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         controller: 'RecommendationCtrl'
       }
     }
+  })
+
+  .state('app.expenseSummary', {
+    url: "/expenseSummary",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/expenseSummary.html",
+        controller: 'ExpenseSummaryCtl'
+      }
+    }
   });
+
   // if none of the above states are matched, use this as the fallback
   // $urlRouterProvider.otherwise('/app/playlists');
   $urlRouterProvider.otherwise('/app/recommendations');
-  
+
 });
