@@ -1,81 +1,23 @@
 <ion-view view-title="Recommendations">
   <ion-content>
-  	<section id="cd-timeline" class="cd-container">
-	    <ion-list>
-			<div class="cd-timeline-block">
-				<div class="cd-timeline-img cd-picture">
-					<img src="../img/cd-icon-location.svg" alt="Picture">
-				</div> <!-- cd-timeline-img -->
+    <section id="cd-timeline" class="cd-container">
+      <ion-list>
+        <div class="cd-timeline-block" ng-repeat="r in recommendations">
+          <div class="cd-timeline-img cd-picture">
+            <img src="../img/cd-icon-location.svg" alt="Picture">
+          </div>
+          <!-- cd-timeline-img -->
 
-				<div class="cd-timeline-content">
-					<h3>Save $3 at MM Cafe</h3>
-					<p>Instead of $8 Coffee at Starbucks, MM gives you the same experience with a lower price.</p>
-					<a href="#0" class="cd-read-more">Claim now</a>
-					<span class="cd-date">8:30am</span>
-				</div> <!-- cd-timeline-content -->
-			</div> <!-- cd-timeline-block -->
-			<div class="cd-timeline-block">
-				<div class="cd-timeline-img cd-picture">
-					<img src="../img/cd-icon-location.svg" alt="Picture">
-				</div> <!-- cd-timeline-img -->
-
-				<div class="cd-timeline-content">
-					<h3>Save $10 at Restaurant YoYo</h3>
-					<p>Healthy and economic lunch set.</p>
-					<a href="#0" class="cd-read-more">Claim now</a>
-					<span class="cd-date">12:00pm</span>
-				</div> <!-- cd-timeline-content -->
-			</div> <!-- cd-timeline-block -->
-			<div class="cd-timeline-block">
-				<div class="cd-timeline-img cd-picture">
-					<img src="../img/cd-icon-location.svg" alt="Picture">
-				</div> <!-- cd-timeline-img -->
-
-				<div class="cd-timeline-content">
-					<h3>Switch sweets to fruits, save  $2</h3>
-					<p>Tired in the afternoon, recharge you with nutritiousness and freshness.</p>
-					<a href="#0" class="cd-read-more">Claim now</a>
-					<span class="cd-date">3:00pm</span>
-				</div> <!-- cd-timeline-content -->
-			</div> <!-- cd-timeline-block -->
-			<div class="cd-timeline-block">
-				<div class="cd-timeline-img cd-picture">
-					<img src="../img/cd-icon-location.svg" alt="Picture">
-				</div> <!-- cd-timeline-img -->
-
-				<div class="cd-timeline-content">
-					<h3>Dinner at JustAsia, save $10</h3>
-					<p>Close to your workplace, economic and tasty.</p>
-					<a href="#0" class="cd-read-more">Claim now</a>
-					<span class="cd-date">5:00pm</span>
-				</div> <!-- cd-timeline-content -->
-			</div> <!-- cd-timeline-block -->
-			<div class="cd-timeline-block">
-				<div class="cd-timeline-img cd-picture">
-					<img src="../img/cd-icon-location.svg" alt="Picture">
-				</div> <!-- cd-timeline-img -->
-
-				<div class="cd-timeline-content">
-					<h3>20% discount at Giant</h3>
-					<p>Chinese New Year discount.</p>
-					<a href="#0" class="cd-read-more">Claim now</a>
-					<span class="cd-date">8:00pm</span>
-				</div> <!-- cd-timeline-content -->
-			</div> <!-- cd-timeline-block -->
-			<div class="cd-timeline-block">
-				<div class="cd-timeline-img cd-picture">
-					<img src="../img/cd-icon-location.svg" alt="Picture">
-				</div> <!-- cd-timeline-img -->
-
-				<div class="cd-timeline-content">
-					<h3>Save $5 at Heison Bar</h3>
-					<p>Popular spot for expats.</p>
-					<a href="#0" class="cd-read-more">Claim now</a>
-					<span class="cd-date">11:00pm</span>
-				</div> <!-- cd-timeline-content -->
-			</div> <!-- cd-timeline-block -->
-
-	    </ion-list>
-	</div>
+          <div class="cd-timeline-content">
+            <h3>{{r.title}}</h3>
+            <p>{{r.desc}}</p>
+            <a href="#0" class="cd-read-more">Claim now</a>
+            <span class="cd-date">11:00pm</span>
+          </div>
+          <!-- cd-timeline-content -->
+        </div>
+        <!-- cd-timeline-block -->
+      </ion-list>
+      </div>
   </ion-content>
 </ion-view>
