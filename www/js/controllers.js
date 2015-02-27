@@ -55,8 +55,8 @@ angular.module('starter.controllers', [])
   $scope.savedExpenseData = [];
   $scope.simDataIdx = 0;
   $scope.simData = [
-    createExpense("Ajisen", "Ramen", "$16.00", "27/02/2015"),
-    createExpense("Starbucks", "Coffee", "$5.00", "27/02/2015"),
+    createExpense("Ajisen", "Ramen", "$16.00", "02/27/2015"),
+    createExpense("Starbucks", "Coffee", "$5.00", "02/27/2015"),
   ];
 
   function createExpense(shopName, expenseType, amount, date) {
@@ -64,9 +64,10 @@ angular.module('starter.controllers', [])
       "shopName": shopName,
       "expenseType": expenseType,
       "amount": amount,
-      "date": date
+      "date": moment(date)
     };
   }
+
   $scope.incSimDataIdx = function() {
     $scope.simDataIdx = ($scope.simDataIdx + 1) % $scope.simData.length;
     console.log("simDataIdx", $scope.simDataIdx);
@@ -210,4 +211,9 @@ angular.module('starter.controllers', [])
 
 .controller('RecommendationCtrl', function($scope, $stateParams) {})
 
-.controller('ExpenseSummaryCtl', function($scope) {});
+.controller('ExpenseSummaryCtl', function($scope) {
+  $scope.selected = 'Year';
+  $scope.select = function(type) {
+    $scope.selected = type;
+  };
+});

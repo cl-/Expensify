@@ -1,12 +1,29 @@
 <ion-view view-title="Expense Summary">
   <ion-content>
+    <div class="row">
+      <div class="col">
+        <button class="button" ng-class="{'button-calm': selected != 'Day', 'button-positive': selected == 'Day'}" style="width: 100%" ng-click="select('Day')">Day</button>
+      </div>
+      <div class="col">
+        <button class="button" ng-class="{'button-calm': selected != 'Week', 'button-positive': selected == 'Week'}" style="width: 100%" ng-click="select('Week')">Week</button>
+      </div>
+      <div class="col">
+        <button class="button" ng-class="{'button-calm': selected != 'Month', 'button-positive': selected == 'Month'}" style="width: 100%" ng-click="select('Month')">Month</button>
+      </div>
+      <div class="col">
+        <button class="button" ng-class="{'button-calm': selected != 'Year', 'button-positive': selected == 'Year'}" style="width: 100%" ng-click="select('Year')">Year</button>
+      </div>
+    </div>
     <ion-list>
       <ion-item ng-repeat="s in simData">
         <div style="float:left">
           <h3>{{s.shopName}}</h3>
           <p>{{s.expenseType}}</p>
         </div>
-        <span class="item-note"><p>{{s.amount}}</p><p>{{s.date}}</p></span>
+        <span class="item-note">
+          <p>{{s.amount}}</p>
+          <p>{{s.date.format('DD/MM/YYYY')}}</p>
+        </span>
       </ion-item>
     </ion-list>
   </ion-content>
