@@ -2,14 +2,14 @@
   <ion-content>
 
     <div class="list card">
-      <div class="item item-divider">Link to DBS/div>
+      <div class="item item-divider">Link to DBS</div>
 
       <a ng-hide="showExpandedDBS && linkState_DBS<2" class="item item-thumbnail-left" ng-REPEAT="bank in banks.slice(0,1)" href="#">
         <img ng-src="{{bank.imgUrl}}" style="border-radius:5px;">
         <!-- <p>Description</p> -->
         <p style="vertical-align:middle;">
           <button on-touch="showExpandedDBSCard(true)" ng-show="linkState_DBS<2" class="button button-positive floatRight" style="margin:15px;">Expand</button>
-          
+
           <p ng-show="linkState_DBS>=2">Andrew Pinter <br>S/N: 849-54820-6</p>
           <div class="floatLeft">
             <button on-touch="unlinkDBS()" ng-show="linkState_DBS>=2"class="button button-positive floatRight">Unlink Account</button>
