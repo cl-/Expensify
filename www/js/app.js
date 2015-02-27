@@ -88,6 +88,16 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     }
   })
 
+  .state('app.banks', {
+    url: "/banks",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/banks.html",
+        controller: 'BanksCtl'
+      }
+    }
+  })
+
     .state('app.recommendations', {
       url: "/recommendations",
       views: {
