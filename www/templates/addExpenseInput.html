@@ -1,14 +1,14 @@
 <ion-view view-title="Add Expense">
   <ion-content>
     <ion-item class="item item-divider card"> <!-- #GOTCHA: conflict between item and list in class="item item-divider list card" -->
-      <ion-item class="item item-avatar">
+      <ion-item class="item item-avatar" style="padding:0;"> <!-- This padding is ok on desktop, too much on mobile. --> <!-- #QUICK.HACK.ON.STYLE -->
           <div class="row">
-              <div class="col padding-r25">Shop Name: <input type="text" ng-model="d.expenseInput.shopName" class="forceRoundBorder"></div> <!-- QUICK.HACK.ON.STYLE -->
-              <div class="col padding-r25">Expense Type: <input type="text" ng-model="d.expenseInput.expenseType" class="forceRoundBorder"></div>
+              <div class="col padding-r3p">Shop Name: <input type="text" ng-model="d.expenseInput.shopName" class="forceRoundBorder"></div> <!-- QUICK.HACK.ON.STYLE -->
+              <div class="col padding-r3p">Expense Type: <input type="text" ng-model="d.expenseInput.expenseType" class="forceRoundBorder"></div>
           </div>
           <div class="row">
-              <div class="col padding-r25">Amount: <input type="text" ng-model="d.expenseInput.amount" class="forceRoundBorder"></div>
-              <div class="col padding-r25">Date: <input type="text" ng-model="d.expenseInput.date" class="forceRoundBorder"></div>
+              <div class="col padding-r3p">Amount: <input type="text" ng-model="d.expenseInput.amount" class="forceRoundBorder"></div>
+              <div class="col padding-r3p">Date: <input type="text" ng-model="d.expenseInput.date" class="forceRoundBorder"></div>
           </div>
       </ion-item>
       <ion-item class="item item-body" style="height:100%">
