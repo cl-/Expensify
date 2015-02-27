@@ -13,6 +13,9 @@
 .floatLeft{
   float: left;
 }
+.floatRight{
+  float: right;
+}
 .floatClear{
   clear: both;
 }
@@ -26,6 +29,11 @@
 }
 .traslucent{
   opacity: 0.5;
+}
+
+.item{
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 

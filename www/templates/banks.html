@@ -1,0 +1,14 @@
+<ion-view view-title="Banks">
+  <ion-content>
+    <div class="list">
+        <a class="item item-thumbnail-left" ng-REPEAT="bank in banks" href="#">
+          <img ng-src="{{bank.imgUrl}}" style="border-radius:5px;">
+          <!-- <p>Description</p> -->
+          <p style="vertical-align:middle; margin:15px;">
+            <button on-touch="getBankAuthorisation($index)" class="button button-positive floatRight">Link Account Access</button>
+          </p>
+        </a>
+    </div><!-- endof list -->
+
+  </ion-content>
+</ion-view>

@@ -77,16 +77,28 @@ angular.module('starter', ['ionic', 'starter.controllers'])
           // controller: 'addExpenseCtl'
         }
       }
-    })
-    .state('app.addExpenseInput', {
-      url: "/addExpense/:methodType",
-      views: {
-        'menuContent': {
-          templateUrl: "templates/addExpenseInput.html",
-          controller: 'addExpenseCtl'
-        }
+  })
+
+  .state('app.addExpenseInput', {
+    url: "/addExpense/:methodType",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/addExpenseInput.html",
+        controller: 'addExpenseCtl'
       }
-    })
+    }
+  })
+
+
+  .state('app.banks', {
+    url: "/banks",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/banks.html",
+        controller: 'BanksCtl'
+      }
+    }
+  })
 
   .state('app.recommendations', {
     url: "/recommendations",

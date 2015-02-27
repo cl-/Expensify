@@ -185,6 +185,18 @@ angular.module('starter.controllers', [])
 
 }])
 
+.controller('BanksCtl', ["$scope", function($scope) {
+  $scope.banks = [
+    createBank("DBS Bank", "img/logo/logo_dbs.gif"),
+    createBank("Citi Bank", "img/logo/logo_citi.jpg"),
+    createBank("OCBC Bank", "img/logo/logo_ocbc.jpg"),
+    createBank("Standard Chartered Bank", "img/logo/logo_standard-chartered.jpg"),
+  ];
+
+  function createBank(name, imgUrl){
+    return {"name":name, "imgUrl":imgUrl, "linked":false};
+  }
+}])
 
 
 .controller('RecommendationsCtrl', function($scope) {
