@@ -77,6 +77,10 @@ angular.module('starter.controllers', [])
   $scope.simData = [
     createExpense("Ajisen", "Ramen", "$16.00", "02/27/2015"),
     createExpense("Starbucks", "Coffee", "$5.00", "02/27/2015"),
+    createExpense("Spotify", "Premium", "$5.00", "02/26/2015"),
+    createExpense("Texas Roadhouse", "Dinner", "$20.00", "02/26/2015"),
+    createExpense("McDonald's", "McDouble", "$2.00", "02/26/2015"),
+    createExpense("Starbucks", "Coffee", "$5.00", "02/26/2015"),
   ];
 
   function createExpense(shopName, expenseType, amount, date) {
