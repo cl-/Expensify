@@ -1,0 +1,21 @@
+<ion-view view-title="Recommendations">
+  <ion-content>
+    <section id="cd-timeline" class="cd-container">
+      <ion-list>
+        <div class="cd-timeline-block" ng-repeat="r in recommendations">
+          <div class="cd-timeline-img cd-picture">
+            <img src="../img/cd-icon-location.svg" alt="Picture">
+          </div>
+
+          <div class="cd-timeline-content">
+            <h3>{{r.title}}</h3>
+            <p>{{r.desc}}</p>
+            <a href="#0" class="cd-read-more">Claim now</a>
+            <span class="cd-date">11:00pm</span>
+          </div>
+
+        </div>
+      </ion-list>
+    </section>
+  </ion-content>
+</ion-view>
