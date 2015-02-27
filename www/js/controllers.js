@@ -246,11 +246,12 @@ angular.module('starter.controllers', [])
   $scope.select = function(type) {
     $scope.selected = type;
   };
+  $scope.today = moment();
   $scope.date = moment();
   $scope.prev = function() {
-    $scope.date.subtract(1, 'days');
+    $scope.date.subtract(1, $scope.selected.toLowerCase() + 's');
   };
   $scope.next = function() {
-    $scope.date.add(1, 'days');
+    $scope.date.add(1, $scope.selected.toLowerCase() + 's');
   };
 });
