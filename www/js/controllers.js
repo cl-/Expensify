@@ -208,4 +208,6 @@ angular.module('starter.controllers', [])
   }];
 })
 
-.controller('RecommendationCtrl', function($scope, $stateParams) {});
+.controller('RecommendationCtrl', function($scope, $stateParams) {})
+
+.controller('ExpenseSummaryCtl', function($scope) {});
