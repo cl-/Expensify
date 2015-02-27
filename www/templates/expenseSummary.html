@@ -12,7 +12,7 @@
       <button ng-click="next()" class="button icon ion-chevron-right"></button>
     </div>
     <ion-list>
-      <ion-item ng-repeat="s in simData">
+      <ion-item ng-repeat="s in filterSim = (simData | correspondsDate:date:selected)">
         <div style="float:left">
           <h3>{{s.shopName}}</h3>
           <p>{{s.expenseType}}</p>
@@ -23,5 +23,6 @@
         </span>
       </ion-item>
     </ion-list>
+    <div ng-hide="filterSim.length">No expenses found.</div>
   </ion-content>
 </ion-view>

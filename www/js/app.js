@@ -122,4 +122,12 @@ angular.module('starter', ['ionic', 'starter.controllers'])
   // $urlRouterProvider.otherwise('/app/playlists');
   $urlRouterProvider.otherwise('/app/recommendations');
 
+})
+
+.filter('correspondsDate', function() {
+  return function(input, date, type) {
+    return input.filter(function(el) {
+      return el.date.isSame(date, type.toLowerCase());
+    });
+  };
 });
