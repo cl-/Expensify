@@ -224,7 +224,7 @@ angular.module('starter.controllers', [])
 .controller('RecommendationCtrl', function($scope, $stateParams) {})
 
 .controller('ExpenseSummaryCtl', function($scope) {
-  $scope.selected = 'Year';
+  $scope.selected = 'Day';
   $scope.select = function(type) {
     $scope.selected = type;
   };
