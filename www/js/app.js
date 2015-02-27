@@ -68,6 +68,26 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     }
   })
 
+
+  .state('app.addExpense', {
+    url: "/addExpense",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/addExpense.html",
+        // controller: 'addExpenseCtl'
+      }
+    }
+  })
+  .state('app.addExpenseInput', {
+    url: "/addExpense/:methodType",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/addExpenseInput.html",
+        controller: 'addExpenseCtl'
+      }
+    }
+  })
+
     .state('app.recommendations', {
       url: "/recommendations",
       views: {

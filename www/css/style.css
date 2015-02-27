@@ -2,9 +2,31 @@
 
 
 
+.margin-lr10 {
+  margin-left: 10px;
+  margin-right: 10px;
+}
 
-
-
+.margin-r10 {
+  margin-right: 10px;
+}
+.floatLeft{
+  float: left;
+}
+.floatClear{
+  clear: both;
+}
+.forceRoundBorder{
+  border: 1px solid rgba(0,0,0,0.7) !important;
+  border-radius: 5px;
+  padding: 10px !important;
+}
+.padding-r25{
+  padding-right: 25px;
+}
+.traslucent{
+  opacity: 0.5;
+}
 
 
 //CSS for Recommendations ----------{}
