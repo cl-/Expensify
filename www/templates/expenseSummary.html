@@ -8,7 +8,12 @@
     </div>
     <div class="bar bar-royal" style="position: relative">
       <button ng-click="prev()" class="button icon ion-chevron-left"></button>
-      <div class="h1 title">{{date.format('Do MMMM, YYYY')}}</div>
+
+      <div class="h1 title" ng-if="selected == 'Day'">{{date.format('Do MMMM, YYYY')}}</div>
+      <div class="h1 title" ng-if="selected == 'Week'">Week of {{date.day('Sunday').format('Do MMMM, YYYY')}}</div>
+      <div class="h1 title" ng-if="selected == 'Month'">{{date.format('MMMM YYYY')}}</div>
+      <div class="h1 title" ng-if="selected == 'Year'">{{date.format('YYYY')}}</div>
+
       <button ng-click="next()" class="button icon ion-chevron-right"></button>
     </div>
     <ion-list>
