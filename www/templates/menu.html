@@ -12,7 +12,7 @@
     <ion-nav-view name="menuContent"></ion-nav-view>
   </ion-side-menu-content>
 
-  <ion-side-menu side="left">
+  <ion-side-menu side="left" style="background-color:red">
     <ion-header-bar class="bar-dark">
       <h1 class="title">Options</h1>
     </ion-header-bar>
@@ -30,22 +30,22 @@
           Login
         </ion-item> -->
         <ion-item nav-clear menu-close>
-          My Expenses
+          <i class="ion-pricetags"></i> My Expenses
         </ion-item>
         <ion-item nav-clear menu-close href="#/app/addExpense">
-          &nbsp; &nbsp; > Add
+          &nbsp; &nbsp; <i class="ion-plus-circled"></i>&nbsp; Add
         </ion-item>
         <ion-item nav-clear menu-close href="#/app/expenseSummary">
-          &nbsp; &nbsp; > View Summary
+          &nbsp; &nbsp; <i class="ion-document-text"></i>&nbsp; View Summary
         </ion-item>
         <ion-item nav-clear menu-close href="#/app/recommendations">
-          My Recommendations
+          <i class="ion-bag"></i>&nbsp; My Recommendations
         </ion-item>
         <ion-item nav-clear menu-close href="#/app/messages">
-          My Messages
+          <i class="ion-email"></i>&nbsp; My Messages
         </ion-item>
         <ion-item nav-clear menu-close href="#/app/banks">
-          Link to Bank
+          <i class="ion-card"></i>&nbsp; Link to Bank
         </ion-item>
         <ion-item nav-clear menu-close href="#/app/plugins">
           Plugins
