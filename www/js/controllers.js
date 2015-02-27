@@ -228,6 +228,7 @@ angular.module('starter.controllers', [])
 
 .controller('RecommendationCtrl', function($scope, $stateParams) {
   $scope.item = recs[$stateParams.recommendationId];
+
 })
 
 .controller('ExpenseSummaryCtl', function($scope) {
