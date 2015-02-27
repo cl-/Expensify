@@ -1,3 +1,23 @@
+var recs = [{
+  title: 'Save $3 at MM Cafe',
+  desc: 'Instead of $8 Coffee at Starbucks, MM gives you the same experience with a lower price.'
+}, {
+  title: 'Save $10 at Restaurant YoYo',
+  desc: 'Healthy and economic lunch set.'
+}, {
+  title: 'Switch sweets to fruits, save $2',
+  desc: 'Tired in the afternoon, recharge you with nutritiousness and freshness.'
+}, {
+  title: 'Dinner at JustAsia, save $10',
+  desc: 'Close to your workplace, economic and tasty.'
+}, {
+  title: '20% discount at Giant',
+  desc: 'Chinese New Year discount.'
+}, {
+  title: 'Save $5 at Heison Bar',
+  desc: 'Popular spot for expats.'
+}];
+
 angular.module('starter.controllers', [])
 
 .factory('Camera', ['$q', function($q) {
@@ -193,35 +213,22 @@ angular.module('starter.controllers', [])
     createBank("Standard Chartered Bank", "img/logo/logo_standard-chartered.jpg"),
   ];
 
-  function createBank(name, imgUrl){
-    return {"name":name, "imgUrl":imgUrl, "linked":false};
+  function createBank(name, imgUrl) {
+    return {
+      "name": name,
+      "imgUrl": imgUrl,
+      "linked": false
+    };
   }
 }])
 
-
 .controller('RecommendationsCtrl', function($scope) {
-  $scope.recommendations = [{
-    title: 'Save $3 at MM Cafe',
-    desc: 'Instead of $8 Coffee at Starbucks, MM gives you the same experience with a lower price.'
-  }, {
-    title: 'Save $10 at Restaurant YoYo',
-    desc: 'Healthy and economic lunch set.'
-  }, {
-    title: 'Switch sweets to fruits, save $2',
-    desc: 'Tired in the afternoon, recharge you with nutritiousness and freshness.'
-  }, {
-    title: 'Dinner at JustAsia, save $10',
-    desc: 'Close to your workplace, economic and tasty.'
-  }, {
-    title: '20% discount at Giant',
-    desc: 'Chinese New Year discount.'
-  }, {
-    title: 'Save $5 at Heison Bar',
-    desc: 'Popular spot for expats.'
-  }];
+  $scope.recommendations = recs;
 })
 
-.controller('RecommendationCtrl', function($scope, $stateParams) {})
+.controller('RecommendationCtrl', function($scope, $stateParams) {
+  $scope.item = recs[$stateParams.recommendationId];
+})
 
 .controller('ExpenseSummaryCtl', function($scope) {
   $scope.selected = 'Day';
