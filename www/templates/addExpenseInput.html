@@ -23,9 +23,9 @@
           <div ng-show="methodType==1" style="margin-bottom:30px;" ng-init="simLoadImageURI();">
               <div on-touch="getPhoto();" on-release="addDataToFields();" style="max-height:100%; text-align:center;">
                 <img ng-src="{{imageURI}}" style="max-height:500px; {{d.opacityStr}}">
-                {{imgURI|json}}
-                {{d}}
-                {{d.opacityStr}}
+                <div hidden>
+                  {{d}}{{d.opacityStr}}
+                </div>
                 <div style="vertical-align:middle; height:100%; width:100%;"><i class="ion-camera"></i> Tap to Take Picture</div>
               </div>
           </div>
