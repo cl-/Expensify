@@ -81,12 +81,65 @@ angular.module('starter.controllers', [])
   $scope.savedExpenseData = [];
   $scope.simDataIdx = 0;
   $scope.simData = [
-    createExpense("Ajisen", "Ramen", "$16.00", "02/27/2015"),
-    createExpense("Starbucks", "Coffee", "$5.00", "02/27/2015"),
-    createExpense("Spotify", "Premium", "$5.00", "02/26/2015"),
-    createExpense("Texas Roadhouse", "Dinner", "$20.00", "02/26/2015"),
-    createExpense("McDonald's", "McDouble", "$2.00", "02/26/2015"),
-    createExpense("Starbucks", "Coffee", "$5.00", "02/26/2015"),
+    createExpense("Starbucks", "Food/Drinks", "$6.50", "02/01/2015"),
+    createExpense("Golden Village", "Entertainment", "$19.00", "02/01/2015"),
+    createExpense("Sushi Tei", "Food/Drinks", "$71.00", "02/01/2015"),
+    createExpense("Zara", "Shopping", "$89.90", "02/01/2015"),
+    createExpense("Ding Tai Fung", "Food/Drinks", "$101.50", "02/01/2015"),
+    createExpense("Starbucks", "Food/Drinks", "$6.50", "02/02/2015"),
+    createExpense("Cedele", "Food/Drinks", "$18.50", "02/02/2015"),
+    createExpense("Starbucks", "Food/Drinks", "$6.50", "02/03/2015"),
+    createExpense("Rotisserie", "Food/Drinks", "$11.50", "02/03/2015"),
+    createExpense("Starbucks", "Food/Drinks", "$6.50", "02/04/2015"),
+    createExpense("SaladStops", "Food/Drinks", "$11.50", "02/04/2015"),
+    createExpense("Harry's Bar", "Food/Drinks", "$25.56", "02/04/2015"),
+    createExpense("Starbucks", "Food/Drinks", "$6.50", "02/05/2015"),
+    createExpense("Toast Box", "Food/Drinks", "$10.50", "02/05/2015"),
+    createExpense("Starbucks", "Food/Drinks", "$6.50", "02/06/2015"),
+    createExpense("SaladStops", "Food/Drinks", "$18.00", "02/06/2015"),
+    createExpense("Starbucks", "Food/Drinks", "$6.50", "02/07/2015"),
+    createExpense("Sushi Tei", "Food/Drinks", "$19.50", "02/07/2015"),
+    createExpense("Watsons", "Household/Toiletries", "$69.00", "02/07/2015"),
+    createExpense("SaladStops", "Food/Drinks", "$18.00", "02/07/2015"),
+    createExpense("Starbucks", "Food/Drinks", "$6.50", "02/08/2015"),
+    createExpense("Golden Village", "Entertainment", "$19.00", "02/08/2015"),
+    createExpense("Sushi Tei", "Food/Drinks", "$56.00", "02/08/2015"),
+    createExpense("G2000", "Shopping", "$91.90", "02/08/2015"),
+    createExpense("Ding Tai Fung", "Food/Drinks", "$80.00", "02/08/2015"),
+    createExpense("Starbucks", "Food/Drinks", "$6.50", "02/09/2015"),
+    createExpense("Cedele", "Food/Drinks", "$18.50", "02/09/2015"),
+    createExpense("Starbucks", "Food/Drinks", "$6.50", "02/10/2015"),
+    createExpense("Rotisserie", "Food/Drinks", "$11.50", "02/10/2015"),
+    createExpense("Starbucks", "Food/Drinks", "$6.50", "02/11/2015"),
+    createExpense("SaladStops", "Food/Drinks", "$11.50", "02/11/2015"),
+    createExpense("Harry's Bar", "Food/Drinks", "$25.56", "02/11/2015"),
+    createExpense("Starbucks", "Food/Drinks", "$6.50", "02/12/2015"),
+    createExpense("Toast Box", "Food/Drinks", "$10.50", "02/12/2015"),
+    createExpense("Starbucks", "Food/Drinks", "$6.50", "02/13/2015"),
+    createExpense("SaladStops", "Food/Drinks", "$18.00", "02/13/2015"),
+    createExpense("Starbucks", "Food/Drinks", "$6.50", "02/14/2015"),
+    createExpense("Sushi Tei", "Food/Drinks", "$19.50", "02/14/2015"),
+    createExpense("Watsons", "Household/Toiletries", "$69.00", "02/14/2015"),
+    createExpense("Starbucks", "Food/Drinks", "$6.50", "02/15/2015"),
+    createExpense("Golden Village", "Entertainment", "$19.00", "02/15/2015"),
+    createExpense("Sushi Tei", "Food/Drinks", "$56.00", "02/15/2015"),
+    createExpense("G2000", "Shopping", "$91.90", "02/15/2015"),
+    createExpense("Ding Tai Fung", "Food/Drinks", "$80.00", "02/15/2015"),
+    createExpense("Starbucks", "Food/Drinks", "$6.50", "02/16/2015"),
+    createExpense("Cedele", "Food/Drinks", "$18.50", "02/16/2015"),
+    createExpense("Starbucks", "Food/Drinks", "$6.50", "02/17/2015"),
+    createExpense("Rotisserie", "Food/Drinks", "$11.50", "02/17/2015"),
+    createExpense("Starbucks", "Food/Drinks", "$6.50", "02/18/2015"),
+    createExpense("SaladStops", "Food/Drinks", "$11.50", "02/18/2015"),
+    createExpense("Harry's Bar", "Food/Drinks", "$25.56", "02/18/2015"),
+    createExpense("Starbucks", "Food/Drinks", "$6.50", "02/19/2015"),
+    createExpense("Ding Tai Fung", "Food/Drinks", "$200.50", "02/19/2015"),
+    createExpense("Starbucks", "Food/Drinks", "$6.50", "02/20/2015"),
+    createExpense("McDonalds", "Food/Drinks", "$30.50", "02/20/2015"),
+    createExpense("Golden Village", "Entertainment", "$95.00", "02/20/2015"),
+    createExpense("Starbucks", "Food/Drinks", "$6.50", "02/21/2015"),
+    createExpense("Sushi Tei", "Food/Drinks", "$19.50", "02/21/2015"),
+    createExpense("Universal Studios", "Entertainment", "$200.00", "02/21/2015")
   ];
 
   function createExpense(shopName, expenseType, amount, date) {
@@ -232,21 +285,21 @@ angular.module('starter.controllers', [])
       "linked": false
     };
   };
-  $scope.showExpandedDBSCard = function(){
+  $scope.showExpandedDBSCard = function() {
     $scope.showExpandedDBS = true;
   };
-  $scope.hideExpandedDBSCard = function(){
+  $scope.hideExpandedDBSCard = function() {
     $scope.showExpandedDBS = false;
   };
-  $scope.loadDBSData = function(){
+  $scope.loadDBSData = function() {
     $scope.linkState_DBS = 1; //$scope.isLoadingDBSData
-    $timeout(function(){
+    $timeout(function() {
       $scope.linkState_DBS = 2;
       $scope.showExpandedDBS = false;
     }, 2000);
   }
-  
-  $scope.unlinkDBS = function(){
+
+  $scope.unlinkDBS = function() {
     $scope.linkState_DBS = 0; //$scope.isLoadingDBSData
   }
 
