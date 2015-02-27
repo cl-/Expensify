@@ -1,21 +1,49 @@
 var recs = [{
   title: 'Save $3 at MM Cafe',
-  desc: 'Instead of $8 Coffee at Starbucks, MM gives you the same experience with a lower price.'
+  desc: 'Instead of $8 Coffee at Starbucks, MM gives you the same experience with a lower price.',
+  time: "8:00am"
 }, {
   title: 'Save $10 at Restaurant YoYo',
-  desc: 'Healthy and economic lunch set.'
+  desc: 'Healthy and economic lunch set.',
+  time: "12:00pm"
 }, {
   title: 'Switch sweets to fruits, save $2',
-  desc: 'Tired in the afternoon, recharge you with nutritiousness and freshness.'
+  desc: 'Tired in the afternoon, recharge you with nutritiousness and freshness.',
+  time: "3:00pm"
 }, {
   title: 'Dinner at JustAsia, save $10',
-  desc: 'Close to your workplace, economic and tasty.'
+  desc: 'Close to your workplace, economic and tasty.',
+  time: "6:00pm"
 }, {
   title: '20% discount at Giant',
-  desc: 'Chinese New Year discount.'
+  desc: 'Chinese New Year discount.',
+  time: "8:00pm"
 }, {
   title: 'Save $5 at Heison Bar',
-  desc: 'Popular spot for expats.'
+  desc: 'Popular spot for expats.',
+  time: "11:00pm"
+}];
+
+var messages = [{
+  title: 'Don\'t forget to eat your veggies',
+  time: '12 min ago',
+  img: 'http://nomoredirtylooks.com/wp-content/uploads/Colorful-vegetables-755879.jpg',
+  id: 1
+}, {
+  title: 'Take a break from work',
+  time: '32 min ago',
+  img: 'https://s-media-cache-ak0.pinimg.com/originals/b5/d9/ca/b5d9ca738fff1b76c492d9063de0b539.jpg',
+  id: 2
+}, {
+  title: 'Hope you feel better',
+  desc: 'Yesterday',
+  img: 'http://www.kenrockwell.com/canon/lenses/images/60mm-macro/macro/flower-IMG_2753.jpg',
+  id: 3
+}, {
+  title: 'Happy Chinese New Years',
+  desc: '3 days ago',
+  img: 'http://inapcache.boston.com/universal/site_graphics/blogs/bigpicture/chinese_new_year_2011/bp20.jpg',
+  id: 4
 }];
 
 angular.module('starter.controllers', [])
@@ -96,29 +124,15 @@ angular.module('starter.controllers', [])
 
 })
 
-.controller('PlaylistsCtrl', function($scope) {
-  $scope.playlists = [{
-    title: 'Reggae',
-    id: 1
-  }, {
-    title: 'Chill',
-    id: 2
-  }, {
-    title: 'Dubstep',
-    id: 3
-  }, {
-    title: 'Indie',
-    id: 4
-  }, {
-    title: 'Rap',
-    id: 5
-  }, {
-    title: 'Cowbell',
-    id: 6
-  }];
+.controller('MessagesCtrl', function($scope) {
+  $scope.unreadMessages = messages.slice(0, 2);
+
+  $scope.readMessages = messages.slice(2, 4);
 })
 
-.controller('PlaylistCtrl', function($scope, $stateParams) {})
+.controller('MessageCtrl', function($scope, $stateParams) {
+  $scope.item = messages[$stateParams.messageId];
+})
 
 
 .controller('addExpenseCtl', ["$scope", "$stateParams", "Camera", function($scope, $stateParams, Camera) {

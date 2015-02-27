@@ -1,0 +1,27 @@
+<ion-view view-title="Messages">
+  <ion-content>
+    <ion-list>
+      <div class="item item-divider">
+        Unread
+        <span class="badge badge-assertive">2</span>
+      </div>
+      <div ng-repeat="message in unreadMessages" >
+        <a class="item item-avatar" href="#/app/messages/{{$index}}">
+          <img ng-src="{{message.img}}">
+          <h2>{{message.title}}</h2>
+          <p>{{message.time}}</p>
+        </a>
+      </div>
+      <div class="item item-divider">
+        Read
+      </div>
+      <div ng-repeat="message in readMessages">
+        <a class="item item-avatar" href="#/app/messages/{{$index}}">
+          <img ng-src="{{message.img}}">
+          <h2>{{message.title}}</h2>
+          <p>{{message.time}}</p>
+        </a>
+      </div>
+    </ion-list>
+  </ion-content>
+</ion-view>

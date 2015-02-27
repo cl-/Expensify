@@ -1,4 +1,4 @@
-<ion-view view-title="{{item.title}}">
+<ion-view view-title="Message">
   <ion-content>
     <div class="list card">
 
@@ -9,13 +9,9 @@
       </div>
 
       <div class="item item-body">
-        <img class="full-image" src="delorean.jpg">
+        <img class="full-image" ng-src="{{item.img}}">
         <p>
           {{item.desc}}
-        </p>
-        <p>
-          <a href="#" class="subdued">50 claimed</a>
-          <a href="#" class="subdued">30min remaining</a>
         </p>
       </div>
 

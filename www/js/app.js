@@ -48,22 +48,22 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     }
   })
 
-  .state('app.playlists', {
-    url: "/playlists",
+  .state('app.messages', {
+    url: "/messages",
     views: {
       'menuContent': {
-        templateUrl: "templates/playlists.html",
-        controller: 'PlaylistsCtrl'
+        templateUrl: "templates/messages.html",
+        controller: 'MessagesCtrl'
       }
     }
   })
 
-  .state('app.singlePlaylist', { //name must be different
-    url: "/playlists/:playlistId",
+  .state('app.singleMessage', { //name must be different
+    url: "/messages/:messageId",
     views: {
       'menuContent': {
-        templateUrl: "templates/playlist.html",
-        controller: 'PlaylistCtrl'
+        templateUrl: "templates/message.html",
+        controller: 'MessageCtrl'
       }
     }
   })
@@ -131,7 +131,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
   });
 
   // if none of the above states are matched, use this as the fallback
-  // $urlRouterProvider.otherwise('/app/playlists');
+  // $urlRouterProvider.otherwise('/app/messages');
   $urlRouterProvider.otherwise('/app/recommendations');
 
 })
