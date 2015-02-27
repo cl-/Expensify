@@ -6,9 +6,11 @@
       <button class="button" ng-class="{'button-calm': selected != 'Month', 'button-positive': selected == 'Month'}" style="width: 100%" ng-click="select('Month')">Month</button>
       <button class="button" ng-class="{'button-calm': selected != 'Year', 'button-positive': selected == 'Year'}" style="width: 100%" ng-click="select('Year')">Year</button>
     </div>
-    <ion-item class="item-divider">
-      {{now.format('Do MMMM, YYYY')}}
-    </ion-item>
+    <div class="bar bar-royal" style="position: relative">
+      <button ng-click="prev()" class="button icon ion-chevron-left"></button>
+      <div class="h1 title">{{date.format('Do MMMM, YYYY')}}</div>
+      <button ng-click="next()" class="button icon ion-chevron-right"></button>
+    </div>
     <ion-list>
       <ion-item ng-repeat="s in simData">
         <div style="float:left">
