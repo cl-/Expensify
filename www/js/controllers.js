@@ -220,6 +220,12 @@ angular.module('starter.controllers', [])
       "linked": false
     };
   }
+  $scope.showExpandedDBSCard = function(){
+    $scope.showExpandedDBS = true;
+  }
+  $scope.hideExpandedDBSCard = function(){
+    $scope.showExpandedDBS = false;
+  }
 }])
 
 .controller('RecommendationsCtrl', function($scope) {
