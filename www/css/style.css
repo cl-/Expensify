@@ -36,6 +36,36 @@
   border-top-right-radius: 10px;
 }
 
+.circular {
+  width: 100px;
+  height: 100px;
+  border-radius: 150px;
+  -webkit-border-radius: 150px;
+  -moz-border-radius: 150px;
+  background: url(/img/avatar/profile_img.png) no-repeat;
+  background-size: 100px;
+}
+.circular img {
+  width: 100px;
+  height: 100px;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.center{
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+/*.circularSmall{
+  width: 100px;
+  height: 100px;
+  border-radius: 150px;
+  -webkit-border-radius: 150px;
+  -moz-border-radius: 150px;
+  background: url(img/loader-larger.gif) no-repeat;
+  background-size: 100px 100px;
+}*/
 
 //CSS for Recommendations ----------{}
 html * {

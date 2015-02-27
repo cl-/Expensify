@@ -1,27 +1,27 @@
 var recs = [{
   title: 'Save $3 at MM Cafe',
   desc: 'Instead of $8 Coffee at Starbucks, MM gives you the same experience with a lower price.',
-  time: "8:00am"
+  time: moment('2/27/2015 12:00 pm')
 }, {
   title: 'Save $10 at Restaurant YoYo',
   desc: 'Healthy and economic lunch set.',
-  time: "12:00pm"
+  time: moment('2/27/2015 1:00 pm')
 }, {
   title: 'Switch sweets to fruits, save $2',
   desc: 'Tired in the afternoon, recharge you with nutritiousness and freshness.',
-  time: "3:00pm"
+  time: moment('2/27/2015 2:00 pm')
 }, {
   title: 'Dinner at JustAsia, save $10',
   desc: 'Close to your workplace, economic and tasty.',
-  time: "6:00pm"
+  time: moment('2/27/2015 3:00 pm')
 }, {
   title: '20% discount at Giant',
   desc: 'Chinese New Year discount.',
-  time: "8:00pm"
+  time: moment('2/27/2015 4:00 pm')
 }, {
   title: 'Save $5 at Heison Bar',
   desc: 'Popular spot for expats.',
-  time: "11:00pm"
+  time: moment('2/27/2015 8:00 pm')
 }];
 
 var messages = [{
@@ -103,8 +103,65 @@ angular.module('starter.controllers', [])
   $scope.savedExpenseData = [];
   $scope.simDataIdx = 0;
   $scope.simData = [
-    createExpense("Ajisen", "Ramen", "$16.00", "02/27/2015"),
-    createExpense("Starbucks", "Coffee", "$5.00", "02/27/2015"),
+    createExpense("Starbucks", "Food/Drinks", "$6.50", "02/01/2015"),
+    createExpense("Golden Village", "Entertainment", "$19.00", "02/01/2015"),
+    createExpense("Sushi Tei", "Food/Drinks", "$71.00", "02/01/2015"),
+    createExpense("Zara", "Shopping", "$89.90", "02/01/2015"),
+    createExpense("Ding Tai Fung", "Food/Drinks", "$101.50", "02/01/2015"),
+    createExpense("Starbucks", "Food/Drinks", "$6.50", "02/02/2015"),
+    createExpense("Cedele", "Food/Drinks", "$18.50", "02/02/2015"),
+    createExpense("Starbucks", "Food/Drinks", "$6.50", "02/03/2015"),
+    createExpense("Rotisserie", "Food/Drinks", "$11.50", "02/03/2015"),
+    createExpense("Starbucks", "Food/Drinks", "$6.50", "02/04/2015"),
+    createExpense("SaladStops", "Food/Drinks", "$11.50", "02/04/2015"),
+    createExpense("Harry's Bar", "Food/Drinks", "$25.56", "02/04/2015"),
+    createExpense("Starbucks", "Food/Drinks", "$6.50", "02/05/2015"),
+    createExpense("Toast Box", "Food/Drinks", "$10.50", "02/05/2015"),
+    createExpense("Starbucks", "Food/Drinks", "$6.50", "02/06/2015"),
+    createExpense("SaladStops", "Food/Drinks", "$18.00", "02/06/2015"),
+    createExpense("Starbucks", "Food/Drinks", "$6.50", "02/07/2015"),
+    createExpense("Sushi Tei", "Food/Drinks", "$19.50", "02/07/2015"),
+    createExpense("Watsons", "Household/Toiletries", "$69.00", "02/07/2015"),
+    createExpense("SaladStops", "Food/Drinks", "$18.00", "02/07/2015"),
+    createExpense("Starbucks", "Food/Drinks", "$6.50", "02/08/2015"),
+    createExpense("Golden Village", "Entertainment", "$19.00", "02/08/2015"),
+    createExpense("Sushi Tei", "Food/Drinks", "$56.00", "02/08/2015"),
+    createExpense("G2000", "Shopping", "$91.90", "02/08/2015"),
+    createExpense("Ding Tai Fung", "Food/Drinks", "$80.00", "02/08/2015"),
+    createExpense("Starbucks", "Food/Drinks", "$6.50", "02/09/2015"),
+    createExpense("Cedele", "Food/Drinks", "$18.50", "02/09/2015"),
+    createExpense("Starbucks", "Food/Drinks", "$6.50", "02/10/2015"),
+    createExpense("Rotisserie", "Food/Drinks", "$11.50", "02/10/2015"),
+    createExpense("Starbucks", "Food/Drinks", "$6.50", "02/11/2015"),
+    createExpense("SaladStops", "Food/Drinks", "$11.50", "02/11/2015"),
+    createExpense("Harry's Bar", "Food/Drinks", "$25.56", "02/11/2015"),
+    createExpense("Starbucks", "Food/Drinks", "$6.50", "02/12/2015"),
+    createExpense("Toast Box", "Food/Drinks", "$10.50", "02/12/2015"),
+    createExpense("Starbucks", "Food/Drinks", "$6.50", "02/13/2015"),
+    createExpense("SaladStops", "Food/Drinks", "$18.00", "02/13/2015"),
+    createExpense("Starbucks", "Food/Drinks", "$6.50", "02/14/2015"),
+    createExpense("Sushi Tei", "Food/Drinks", "$19.50", "02/14/2015"),
+    createExpense("Watsons", "Household/Toiletries", "$69.00", "02/14/2015"),
+    createExpense("Starbucks", "Food/Drinks", "$6.50", "02/15/2015"),
+    createExpense("Golden Village", "Entertainment", "$19.00", "02/15/2015"),
+    createExpense("Sushi Tei", "Food/Drinks", "$56.00", "02/15/2015"),
+    createExpense("G2000", "Shopping", "$91.90", "02/15/2015"),
+    createExpense("Ding Tai Fung", "Food/Drinks", "$80.00", "02/15/2015"),
+    createExpense("Starbucks", "Food/Drinks", "$6.50", "02/16/2015"),
+    createExpense("Cedele", "Food/Drinks", "$18.50", "02/16/2015"),
+    createExpense("Starbucks", "Food/Drinks", "$6.50", "02/17/2015"),
+    createExpense("Rotisserie", "Food/Drinks", "$11.50", "02/17/2015"),
+    createExpense("Starbucks", "Food/Drinks", "$6.50", "02/18/2015"),
+    createExpense("SaladStops", "Food/Drinks", "$11.50", "02/18/2015"),
+    createExpense("Harry's Bar", "Food/Drinks", "$25.56", "02/18/2015"),
+    createExpense("Starbucks", "Food/Drinks", "$6.50", "02/19/2015"),
+    createExpense("Ding Tai Fung", "Food/Drinks", "$200.50", "02/19/2015"),
+    createExpense("Starbucks", "Food/Drinks", "$6.50", "02/20/2015"),
+    createExpense("McDonalds", "Food/Drinks", "$30.50", "02/20/2015"),
+    createExpense("Golden Village", "Entertainment", "$95.00", "02/20/2015"),
+    createExpense("Starbucks", "Food/Drinks", "$6.50", "02/21/2015"),
+    createExpense("Sushi Tei", "Food/Drinks", "$19.50", "02/21/2015"),
+    createExpense("Universal Studios", "Entertainment", "$200.00", "02/21/2015")
   ];
 
   function createExpense(shopName, expenseType, amount, date) {
@@ -219,7 +276,9 @@ angular.module('starter.controllers', [])
 
 }])
 
-.controller('BanksCtl', ["$scope", function($scope) {
+.controller('BanksCtl', ["$scope", "$timeout", function($scope, $timeout) {
+  $scope.linkState_DBS = 0;
+  $scope.isLoadingDBSData = false;
   $scope.banks = [
     createBank("DBS Bank", "img/logo/logo_dbs.gif"),
     createBank("Citi Bank", "img/logo/logo_citi.jpg"),
@@ -233,7 +292,25 @@ angular.module('starter.controllers', [])
       "imgUrl": imgUrl,
       "linked": false
     };
+  };
+  $scope.showExpandedDBSCard = function() {
+    $scope.showExpandedDBS = true;
+  };
+  $scope.hideExpandedDBSCard = function() {
+    $scope.showExpandedDBS = false;
+  };
+  $scope.loadDBSData = function() {
+    $scope.linkState_DBS = 1; //$scope.isLoadingDBSData
+    $timeout(function() {
+      $scope.linkState_DBS = 2;
+      $scope.showExpandedDBS = false;
+    }, 2000);
   }
+
+  $scope.unlinkDBS = function() {
+    $scope.linkState_DBS = 0; //$scope.isLoadingDBSData
+  }
+
 }])
 
 .controller('RecommendationsCtrl', function($scope) {
@@ -242,6 +319,7 @@ angular.module('starter.controllers', [])
 
 .controller('RecommendationCtrl', function($scope, $stateParams) {
   $scope.item = recs[$stateParams.recommendationId];
+
 })
 
 .controller('ExpenseSummaryCtl', function($scope) {
@@ -249,11 +327,12 @@ angular.module('starter.controllers', [])
   $scope.select = function(type) {
     $scope.selected = type;
   };
+  $scope.today = moment();
   $scope.date = moment();
   $scope.prev = function() {
-    $scope.date.subtract(1, 'days');
+    $scope.date.subtract(1, $scope.selected.toLowerCase() + 's');
   };
   $scope.next = function() {
-    $scope.date.add(1, 'days');
+    $scope.date.add(1, $scope.selected.toLowerCase() + 's');
   };
 });
