@@ -228,4 +228,5 @@ angular.module('starter.controllers', [])
   $scope.select = function(type) {
     $scope.selected = type;
   };
+  $scope.now = moment();
 });
