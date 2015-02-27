@@ -1,21 +1,27 @@
 var recs = [{
   title: 'Save $3 at MM Cafe',
-  desc: 'Instead of $8 Coffee at Starbucks, MM gives you the same experience with a lower price.'
+  desc: 'Instead of $8 Coffee at Starbucks, MM gives you the same experience with a lower price.',
+  time: moment('2/27/2015 12:00 pm')
 }, {
   title: 'Save $10 at Restaurant YoYo',
-  desc: 'Healthy and economic lunch set.'
+  desc: 'Healthy and economic lunch set.',
+  time: moment('2/27/2015 1:00 pm')
 }, {
   title: 'Switch sweets to fruits, save $2',
-  desc: 'Tired in the afternoon, recharge you with nutritiousness and freshness.'
+  desc: 'Tired in the afternoon, recharge you with nutritiousness and freshness.',
+  time: moment('2/27/2015 2:00 pm')
 }, {
   title: 'Dinner at JustAsia, save $10',
-  desc: 'Close to your workplace, economic and tasty.'
+  desc: 'Close to your workplace, economic and tasty.',
+  time: moment('2/27/2015 3:00 pm')
 }, {
   title: '20% discount at Giant',
-  desc: 'Chinese New Year discount.'
+  desc: 'Chinese New Year discount.',
+  time: moment('2/27/2015 4:00 pm')
 }, {
   title: 'Save $5 at Heison Bar',
-  desc: 'Popular spot for expats.'
+  desc: 'Popular spot for expats.',
+  time: moment('2/27/2015 8:00 pm')
 }];
 
 angular.module('starter.controllers', [])
